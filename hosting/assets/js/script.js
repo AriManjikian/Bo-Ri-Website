@@ -24,8 +24,8 @@ const db = getFirestore(app)
  const nameInput = document.querySelector('#nameInput');
  const emailInput = document.querySelector('#emailInput');
  let nameString = '';
-   
- emailSubmit.addEventListener('click', async () => {
+   /**
+emailSubmit.addEventListener('click', async () => {
    console.log(emailInput.value)
    let uid = uniqid()
    if (emailInput.value != '') {
@@ -41,6 +41,8 @@ const db = getFirestore(app)
       console.log('novalue')
     }
  })
+*/
+
 /**
  * navbar toggle
  */

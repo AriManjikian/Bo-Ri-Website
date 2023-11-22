@@ -22,9 +22,15 @@ const db = getFirestore(app)
  const nameInput = document.querySelector('#nameInput');
  const emailInput = document.querySelector('#emailInput');
  let nameString = '';
+<<<<<<< HEAD
  let emailString = '';
    
  emailSubmit.addEventListener('click', async () => {
+=======
+   /**
+emailSubmit.addEventListener('click', async () => {
+   console.log(emailInput.value)
+>>>>>>> 461f36a7b19851dd92fcf9198b2fb856dac50b95
    let uid = uniqid()
    if (emailInput.value !== '') {
      if(nameInput.value !== ''){
@@ -50,6 +56,8 @@ const db = getFirestore(app)
     document.querySelector('#tint').classList.remove('tint')
     document.querySelector('#page-content').classList.remove('page-content')
  })
+*/
+
 /**
  * navbar toggle
  */

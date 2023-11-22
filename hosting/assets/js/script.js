@@ -54,6 +54,7 @@ emailSubmit.addEventListener('click', async () => {
     document.querySelector('#tint').classList.remove('tint')
     document.querySelector('#page-content').classList.remove('page-content')
  })
+})
 
 /**
  * navbar toggle

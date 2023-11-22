@@ -1257,13 +1257,13 @@ h1 {
   transition: all 1.5s;
 }
 
-.sign-up form {
+.sign-up .form {
       margin: 0 auto;
       width: 80%;
       text-align: center;
 }
 
-form input { 
+.form input { 
   width: 100%;
   margin: 25px 0 -5px;
   padding: 18px 0px;

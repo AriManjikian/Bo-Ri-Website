@@ -2,8 +2,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "firebase/firestore";
 import uniqid from 'uniqid';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,7 +14,7 @@ const firebaseConfig = {
   appId: "1:39470883610:web:4e707da44a23d6052042a3"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
  
@@ -24,22 +22,33 @@ const db = getFirestore(app)
  const nameInput = document.querySelector('#nameInput');
  const emailInput = document.querySelector('#emailInput');
  let nameString = '';
+ let emailString = '';
    
  emailSubmit.addEventListener('click', async () => {
-   console.log(emailInput.value)
    let uid = uniqid()
-   if (emailInput.value != '') {
-    if(nameInput.value != ''){
-      nameString == nameInput.value;
-    }
-     await setDoc(doc(db, "emails", uid), {
-       name: nameString,
-       email: emailInput.value,
-       date: Date().toLocaleString(),
-      }); 
+   if (emailInput.value !== '') {
+     if(nameInput.value !== ''){
+       nameString = nameInput.value;
+      }
+      emailString = emailInput.value;
+      try {
+        await setDoc(doc(db, "emails", uid), {
+          name: nameString,
+          email: emailString,
+          date: Date().toLocaleString(),
+         }); 
+      } catch (error) {
+       console.log(error) 
+      }
     } else {
       console.log('novalue')
     }
+    
+    console.log('done')
+    document.querySelector('.modal').classList.add('modal-hide')
+    document.querySelector('.modal').classList.remove('modal-show')
+    document.querySelector('#tint').classList.remove('tint')
+    document.querySelector('#page-content').classList.remove('page-content')
  })
 /**
  * navbar toggle

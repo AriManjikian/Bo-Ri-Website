@@ -17,21 +17,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
  
- const emailSubmit = document.querySelector('#emailSubmit');
- const nameInput = document.querySelector('#nameInput');
- const emailInput = document.querySelector('#emailInput');
- let nameString = '';
- let emailString = '';
-   
- emailSubmit.addEventListener('click', async () => {
+const emailSubmit = document.querySelector('#emailSubmit');
+const nameInput = document.querySelector('#nameInput');
+const emailInput = document.querySelector('#emailInput');
+let nameString = '';
+let emailString = '';
 
-  const uid = function(){
-    return Date.now().toString(36) + Math.random().toString(36).substr(2);
-}
 
 emailSubmit.addEventListener('click', async () => {
-   console.log(emailInput.value)
-   let uid = uid()
+  let uid = Date.now().toString(36) + Math.random().toString(36);
    if (emailInput.value !== '') {
      if(nameInput.value !== ''){
        nameString = nameInput.value;
@@ -46,17 +40,12 @@ emailSubmit.addEventListener('click', async () => {
       } catch (error) {
        console.log(error) 
       }
-    } else {
-      console.log('novalue')
     }
-    
-    console.log('done')
     document.querySelector('.modal').classList.add('modal-hide')
     document.querySelector('.modal').classList.remove('modal-show')
     document.querySelector('#tint').classList.remove('tint')
     document.querySelector('#page-content').classList.remove('page-content')
  })
-})
 
 /**
  * navbar toggle

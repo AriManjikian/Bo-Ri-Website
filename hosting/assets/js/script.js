@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-import uniqid from 'https://cdn.jsdelivr.net/npm/uniqid@5.4.0/index.min.js';
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "firebase/firestore";
+import uniqid from 'uniqid';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

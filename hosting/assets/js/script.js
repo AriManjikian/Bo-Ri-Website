@@ -37,7 +37,7 @@ emailSubmit.addEventListener('click', async () => {
           email: emailString,
           date: Date().toLocaleString(),
          }); 
-      } catch (error) {
+      } catch (error) {dddddddddd
        console.log(error) 
       }
     }

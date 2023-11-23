@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "firebase/firestore";
-import uniqid from 'uniqid';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -26,10 +25,13 @@ const db = getFirestore(app)
    
  emailSubmit.addEventListener('click', async () => {
 
+  const uid = function(){
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
 
 emailSubmit.addEventListener('click', async () => {
    console.log(emailInput.value)
-   let uid = uniqid()
+   let uid = uid()
    if (emailInput.value !== '') {
      if(nameInput.value !== ''){
        nameString = nameInput.value;

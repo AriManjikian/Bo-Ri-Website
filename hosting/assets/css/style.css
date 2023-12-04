@@ -163,8 +163,7 @@ body {
 
 .container { padding-inline: 15px; }
 
-.h2,
-.h3 { font-family: var(--ff-source-sans-pro); }
+.h2, h2, .h3 { font-family: var(--ff-source-sans-pro); }
 
 .btn {
   background-image: var(--gradient-2);
@@ -388,19 +387,9 @@ body {
 
 .banner { margin-block-end: 30px; }
 
-.about .section-title { margin-inline: 0; }
-
 .about {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid var(--purple-navy);
-  border-bottom: 1px solid var(--purple-navy);
-}
-
-.about .underline::before {
-  left: 0;
-  transform: translateX(0);
+  flex-direction: column;
 }
 
 .about-text {
@@ -411,17 +400,6 @@ body {
 .stats-list {
   display: flex;
   gap: 30px;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: row;
-  max-width: 70dvw;
-  gap: 30px;
-}
-
-.about img{
-  width: 15dvw;
 }
 
 .stats-card {
@@ -752,20 +730,9 @@ body {
     margin-inline-start: auto;
   }
 
-
-
-  /**
-   * ABOUT
-   */
-
   .stats-list {
     flex-direction: column;
   }
-
-  .about-content {
-    flex-direction: column;
-  }
-
   .stats-list { grid-template-columns: repeat(3, 1fr); }
 
   /**
@@ -1004,19 +971,6 @@ body {
    */
 
   .hero { min-height: 700px; }
-
-
-
-  /**
-   * ABOUT
-   */
-
-  .about .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
 
 
   /**
@@ -1325,4 +1279,43 @@ input[type="text"] {
 
 .page-content{
   filter: blur(10px);
+}
+
+.referral {
+  text-align: center;
+  margin: auto;
+}
+
+.referral h3 {
+  width: 60ch;
+  color: var(--platinum);
+  margin: auto;
+}
+
+.referral h2 {
+  color: var(--platinum);
+  font-size: var(--fs-3);
+  margin-block-end: 60px;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.diagonal {
+  --skew-angle: -3deg;
+  --background: linear-gradient(
+                  45deg, 
+                  var(--light-blue), 
+                  var(--royal-blue-dark)
+                );
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: '';
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
 }

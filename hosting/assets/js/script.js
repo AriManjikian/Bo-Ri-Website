@@ -102,12 +102,12 @@ document.querySelector('#modal-close').addEventListener('click', () => {
       document.querySelector('#page-content').classList.remove('page-content')
 })
 
-document.querySelector('#show-modal').addEventListener('click', () => {
-  document.querySelector('.modal').classList.remove('modal-hide')
-  document.querySelector('.modal').classList.add('modal-show')
-  document.querySelector('#tint').classList.add('tint')
-  document.querySelector('#page-content').classList.add('page-content')
-})
+// document.querySelector('#show-modal').addEventListener('click', () => {
+//   document.querySelector('.modal').classList.remove('modal-hide')
+//   document.querySelector('.modal').classList.add('modal-show')
+//   document.querySelector('#tint').classList.add('tint')
+//   document.querySelector('#page-content').classList.add('page-content')
+// })
 
 
 /**

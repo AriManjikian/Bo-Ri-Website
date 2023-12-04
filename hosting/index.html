@@ -63,15 +63,15 @@
             </li>
             
             <li class="navbar-item">
-              <a href="#about" class="navbar-link" data-navbar-link>About</a>
+              <a href="#about-anchor" class="navbar-link" data-navbar-link>About</a>
             </li>
             
             <li class="navbar-item">
-              <a href="#pricing" class="navbar-link" data-navbar-link>Pricing</a>
+              <a href="#pricing-anchor" class="navbar-link" data-navbar-link>Pricing</a>
             </li>
 
           <li class="navbar-item">
-            <a href="#examples" class="navbar-link" data-navbar-link>Examples</a>
+            <a href="#examples-anchor" class="navbar-link" data-navbar-link>Examples</a>
           </li>
           
           <li class="navbar-item">
@@ -107,10 +107,10 @@
             
             <p class="hero-subtitle">A team of professional video editors</p>
 
-            <h2 class="h2 hero-title">We Edit Videos.</h2>
+            <h1 class="hero-title">We Edit Videos.</h1>
 
             <button class="btn">
-              <a target="_blank" rel="noopener noreferrer" href="https://calendly.com/theboriteam/introduction-zoom-meeting?month=2023-10" style="color: white">Schedule a Meeting</a>
+              <a href="#calendly-anchor" style="color: white">Schedule a Meeting</a>
             </button>
             
           </div>
@@ -133,7 +133,7 @@
       
       <section class="section about" id="about">
         <div class="container">
-              <h2 class="h2 section-title underline">Why Us?</h2>
+              <h2 class="h2 section-title underline"><span id="about-anchor" class="anchor"></span>Why Us?</h2>
               
               <p class="about-text opacity-hidden">
                 When you choose our video editing agency, you're opting for more than just skilled hands and software proficiency. You're choosing a partner dedicated to making your vision a reality. With over 50 years of combined experience, we bring creativity, professionalism, and a commitment to excellence to every project. We value your input, deliver on time, and offer competitive pricing, ensuring you get the best value for your investment. Let us transform your video content into captivating, audience-engaging masterpieces. Choose us for unparalleled quality and a partnership focused on your success.
@@ -173,7 +173,7 @@
       <section class="section examples" id="examples">
         <div class="container">
 
-          <h2 class="h2 section-title underline">Our Examples</h2>
+          <h2 class="h2 section-title underline"><span id="examples-anchor" class="anchor"></span>Our Examples</h2>
 
           <ul class="examples-list">
 
@@ -203,7 +203,7 @@
       <section class="section pricing" id="pricing">
         <div class="container">
           
-          <h2 class="h2 section-title underline">Pricing</h2>
+          <h2 class="h2 section-title underline"><span id="pricing-anchor" class="anchor"></span>Pricing</h2>
           
           <ul class="pricing-list-btns">
             
@@ -531,8 +531,10 @@
   </main> -->
   
   <!-- CALENDLY -->
-  <div class="calendly-inline-widget" data-url="https://calendly.com/theboriteam/introduction-zoom-meeting?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <div id="calendly-anchor">  
+    <div class="calendly-inline-widget" data-url="https://calendly.com/theboriteam/introduction-zoom-meeting?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </div>
   
   <!-- 
     - #FOOTER

@@ -135,23 +135,42 @@ const onetimelistBtn = document.querySelector('#onetime')
 const onetimelist = document.querySelector('#onetimelist')
 const longBtn = document.querySelector('#long')
 const longList = document.querySelector('#longlist')
+let currentActivePricing = ''
 
 shortBtn.addEventListener('click', (e) => {
+  if (currentActivePricing == 'shortList') {
+    shortList.classList.remove('pricing-list-active')
+    console.log('y')
+    return
+  }
   longList.classList.remove('pricing-list-active')
   onetimelist.classList.remove('pricing-list-active')
   shortList.classList.add('pricing-list-active')
+  currentActivePricing = 'shortList'
   console.log(e.target)
 })
 longBtn.addEventListener('click', (e) => {
+  if (currentActivePricing == 'longList') {
+    console.log('y')
+    longList.classList.remove('pricing-list-active')
+    return
+  }
   shortList.classList.remove('pricing-list-active')
   onetimelist.classList.remove('pricing-list-active')
   longList.classList.add('pricing-list-active')
+  currentActivePricing = 'longList'
   console.log(e.target)
 })
 onetimelistBtn.addEventListener('click', (e) => {
+  if (currentActivePricing == 'oneTime') {
+    console.log('y')
+    onetimelist.classList.remove('pricing-list-active')
+    return
+  }
   shortList.classList.remove('pricing-list-active')
   longList.classList.remove('pricing-list-active')
   onetimelist.classList.add('pricing-list-active')
+  currentActivePricing = 'oneTime'
   console.log(e.target)
 })
 

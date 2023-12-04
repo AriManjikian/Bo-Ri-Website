@@ -36,6 +36,7 @@
   --ff-source-sans-pro: 'Source Sans Pro', sans-serif;
   --ff-poppins: 'Poppins', sans-serif;
 
+  --fs-0: 6.2rem;
   --fs-1: 4.2rem;
   --fs-2: 3.8rem;
   --fs-3: 3.2rem;
@@ -163,7 +164,7 @@ body {
 
 .container { padding-inline: 15px; }
 
-.h2, h2, .h3 { font-family: var(--ff-source-sans-pro); }
+.h2, h2, .h3, h1 { font-family: var(--ff-source-sans-pro); }
 
 .btn {
   background-image: var(--gradient-2);
@@ -367,8 +368,9 @@ body {
 
 .hero-title {
   color: var(--white);
-  font-size: var(--fs-1);
+  font-size: var(--fs-0);
   margin-block-end: 20px;
+  font-family: var(--ff-source-sans-pro);
 }
 
 .hero-text {
@@ -1087,6 +1089,7 @@ body {
   50% { border-color: orange; }
 }
 
+/* TRANSITIONS */
 .opacity-hidden {
   opacity: 0;
   transition: all 2.5s;
@@ -1132,6 +1135,7 @@ body {
   scale: 0;
 }
 
+/* MODAL */
 h1 {
   font-family: 'Open Sans', serif;
   font-weight: 700;
@@ -1281,9 +1285,11 @@ input[type="text"] {
   filter: blur(10px);
 }
 
+/* REFERRAL PROGRAM */
 .referral {
   text-align: center;
   margin: auto;
+  margin-block-end: 70px;
 }
 
 .referral h3 {
@@ -1319,3 +1325,8 @@ input[type="text"] {
   inset: 0;
   transform: skewY(var(--skew-angle));
 }
+
+
+/* ANCHOR TAGS */
+h2{ position:relative; }
+h2 span{ position:absolute; top:-200px;}

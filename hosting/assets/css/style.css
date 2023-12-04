@@ -1294,6 +1294,7 @@ input[type="text"] {
 
 .referral h3 {
   width: 60ch;
+  max-width: 60dvw;
   color: var(--platinum);
   margin: auto;
 }
